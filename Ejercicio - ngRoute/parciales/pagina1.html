@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Información</div>
+  <div class="panel-body">
+    <p>En esta página podrás obtener información como tu IP, ciudad, etc.</p>
+  </div>
+
+  
+
+  <table class="table table-striped">
+   	<tr> 
+   		<th>IP</th>
+   		<th>Ciudad</th>
+   		<th>Región</th>
+   		<th>País</th>
+   		<th>Código país</th>
+   	</tr>
+   	<tr>
+   		<td> {{ geo.geoplugin_request}}</td>
+   		<td>  {{ geo.geoplugin_city }}</td>
+   		<td>  {{ geo.geoplugin_region }}</td>
+   		<td>  {{ geo.geoplugin_countryName }}</td>
+   		<td>  {{ geo.geoplugin_countryCode }}</td>
+   	</tr>
+  </table>
+  {{ geo | json }}
+</div>
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="routeApp">
+	<head>
+		<title> Prueba de ngRoute </title>
+		<meta charset="utf-8" />
+		<!-- Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+		<!--Angular-->
+		<script type="text/javascript" src="js/lib/angular.min.js"></script>
+		
+		<!-- ngRoute -->
+		<script type="text/javascript" src="js/lib/angular-route.js"></script>
+		
+		<!-- Controladores -->
+		<script type="text/javascript" src="js/app.js"></script>
+
+		<script type="text/javascript" src="js/config.js"></script>
+
+		<script type="text/javascript" src="js/controllers/homeCtrl.js"></script>
+		<script type="text/javascript" src="js/controllers/pagCtrl.js"></script>
+		<script type="text/javascript" src="js/controllers/contactoCtrl.js"></script>
+
+
+	</head>
+	<body ng-controller="mainCtrl">
+		<h1> Ejemplo de web dinámica </h1>
+		<h3> usando ngRoute </h3>
+		<hr />
+		<div ng-include="navbar"></div>
+
+		<div class="container">
+			<div ng-view class="col-md-6"> </div>
+		</div>
+	</body>
+</html>
