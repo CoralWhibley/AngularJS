@@ -1,5 +1,5 @@
 {
-"menu":[
+"personas":[
 {
 "Nombre":"Coral",
 "Apellido":"Martinez",
