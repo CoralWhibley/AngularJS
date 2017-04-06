@@ -1,10 +1,10 @@
-app.controller('pagCtrl', ['$scope', '$http', function($scope, $http){
-
-	
-	$http.jsonp('http://www.geoplugin.net/json.gp?jsoncallback=JSON_CALLBACK').success(function (data) {
-		$scope.geo = data.found;
-
-	});
-
+app.controller('pagCtrl',['$scope', '$http', function($scope, $http) {
+	$scope.myData=[];
 	$scope.setActive('cPagina1');
+
+	$http.get('personas.json').then(function (response) {
+    	$scope.myData = response.menu;
+  	}).catch(function(respuesta){
+  		$scope.error = "No se ha encontrado el array.";
+  	})
 }]);
